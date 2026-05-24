@@ -42,6 +42,7 @@ Seed data is pre-loaded with 4 products across 3 warehouses (Chennai, Mumbai, De
 
 ## Data Model
 
+```text
 +-------------+        +------------------+        +---------------+
 |   Product   |        |   StockLevel     |        |   Warehouse   |
 +-------------+        +------------------+        +---------------+
@@ -59,6 +60,7 @@ Seed data is pre-loaded with 4 products across 3 warehouses (Chennai, Mumbai, De
                  | quantity    | status            |
                  | expiresAt   | warehouseId       |
                  +---------------------------------+
+```
 
 **Key design decisions:**
 - `StockLevel` uses a composite PK `(productId, warehouseId)` — one row per product-warehouse pair
